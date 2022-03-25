@@ -6,7 +6,7 @@
 
   <groupId>com.minigans</groupId>
   <artifactId>app2</artifactId>
-  <version>1.0-SNAPSHOT</version>
+  <version>1.0</version>
 
   <name>app2</name>
   <!-- FIXME change it to the project's website -->
@@ -72,4 +72,17 @@
       </plugins>
     </pluginManagement>
   </build>
+
+  <distributionManagement>
+    <repository>
+      <id>central</id>
+      <name>altway-artifactory-releases</name>
+      <url>https://artifactory.altway.dev/artifactory/libs-release</url>
+    </repository>
+    <snapshotRepository>
+      <id>snapshots</id>
+      <name>altway-artifactory-snapshots</name>
+      <url>https://artifactory.altway.dev/artifactory/libs-snapshot</url>
+     </snapshotRepository>
+  </distributionManagement>
 </project>
