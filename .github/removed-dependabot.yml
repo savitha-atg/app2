@@ -4,8 +4,8 @@ registries:
   artifactory-atg:
     type: maven-repository
     url: https://artifactory.altway.dev/artifactory/libs-release
-    username: ${{secrets.MAVEN_USERNAME}}
-    password: ${{secrets.MAVEN_PASSWORD}}
+    username: ${{ secrets.MAVEN_USERNAME }}
+    password: ${{ secrets.MAVEN_PASSWORD }}
 
 updates:
   # Version updates for ATG artifacts. This uses the ATG artifact registry configured above.
