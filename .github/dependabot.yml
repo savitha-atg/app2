@@ -1,0 +1,23 @@
+version: 2
+
+registries:
+  artifactory-atg:
+    type: maven-repository
+    url: https://artifactory.altway.dev/artifactory/libs-release
+    username: ${{secrets.MAVEN_USERNAME}}
+    password: ${{secrets.MAVEN_PASSWORD}}
+
+updates:
+  # Version updates for ATG artifacts. This uses the ATG artifact registry configured above.
+  - package-ecosystem: "maven"
+    directory: "/"
+    schedule:
+      interval: "daily"
+    open-pull-requests-limit: 10
+    rebase-strategy: "auto"
+    registries:
+      - "artifactory-atg"
+    commit-message:
+      prefix: "depbot"
+    allow:
+      - dependency-name: "com.minigans*"
